@@ -1,6 +1,7 @@
 import article from 'data/article.json';
 import data from 'data/data.json';
-import list from 'data/forbes.json'
+import list from 'data/forbes.json';
+import tranaction from 'data/transactions.json';
 
 import {
   BlogCard,
@@ -19,7 +20,7 @@ export const App = () => {
         <Heading marginBottom="50px" textAlign="center">
           Task 1
         </Heading>
-        <BlogCard 
+        <BlogCard
           poster={article.poster}
           tag={article.tag}
           title={article.title}
@@ -33,17 +34,17 @@ export const App = () => {
           Task 2
         </Heading>
         <Statistics title="Main Statistics" stats={data} />
-          <Statistics stats={data} />
+        <Statistics stats={data} />
 
         <Heading marginTop="50px" marginBottom="50px" textAlign="center">
           Task 3
         </Heading>
-        <ForbesList list={ list } />
+        <ForbesList list={list} />
 
         <Heading marginTop="50px" marginBottom="50px" textAlign="center">
           Task 4
         </Heading>
-        <CryptoHistory />
+        <CryptoHistory items={tranaction} />
       </Container>
     </Section>
   );
